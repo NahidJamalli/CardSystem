@@ -1,0 +1,126 @@
+﻿### Register
+POST http://localhost:5180/api/Auth/register
+Content-Type: application/json
+
+{
+  "username": "jamallinahid@gmail.com",
+  "lastName": "Jamalli",
+  "firstName": "Nahid",
+  "password": "Nahid123"
+}
+
+### Login
+POST http://localhost:5180/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "jamallinahid@gmail.com",
+  "password": "XB2WYL9J"
+}
+
+### Renew pwd
+POST http://localhost:5180/api/Auth/new-password
+Content-Type: application/json
+
+{
+  "email": "jamallinahid@gmail.com"
+}
+
+### Test auth
+GET http://localhost:5180/api/Auth/test-auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMi8yMDIyIDIzOjQxOjQ5IiwiZXhwIjoxNjYyMTYyMTA5fQ.NqtFosfafRpFN-VGHdcscuwL1FeuA_pquxoJgllnQCU
+
+### Get accounts
+GET http://localhost:5180/api/Accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+
+### Create accounts
+POST http://localhost:5180/api/Accounts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+Content-Type: application/json
+
+{
+  "balance": 12,
+  "type": "Currency"
+}
+
+### Cash in
+POST http://localhost:5180/api/Accounts/2/cash-in
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+Content-Type: application/json
+
+{
+  "amount": 999
+}
+
+### Get cards
+GET http://localhost:5180/api/Cards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+
+### Create card
+POST http://localhost:5180/api/Cards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+Content-Type: application/json
+
+{
+  "cardNumber": "1515161619191818",
+  "type": "Currency",
+  "currency": "Eur"
+}
+
+### Update card
+PUT http://localhost:5180/api/Cards
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+Content-Type: application/json
+
+{
+  "id": 2,
+  "type": "Currency",
+  "currency": "Eur"
+}
+
+
+### Get transactions
+GET http://localhost:5180/api/Transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+
+### Create transactions
+POST http://localhost:5180/api/Transactions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMy8yMDIyIDExOjU0OjM5IiwiZXhwIjoxNjYyMjA2MDc5fQ._bLF23EkhMFQEzMJTiINAlL4671sBUgLMXm14phji9I
+Content-Type: application/json
+
+{
+  "amount": 500,
+  "cardNumber": "1891473659381623",
+  "vendor": {
+    "name": "Some vendor for testing",
+    "addresses": ["address1", "address2"],
+    "contacts": ["phone1"]
+  }
+}
+
+
+### Get profile
+GET http://localhost:5180/api/Profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMi8yMDIyIDIzOjQxOjQ5IiwiZXhwIjoxNjYyMTYyMTA5fQ.NqtFosfafRpFN-VGHdcscuwL1FeuA_pquxoJgllnQCU
+
+### Update profile
+PUT http://localhost:5180/api/Profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMi8yMDIyIDIzOjQxOjQ5IiwiZXhwIjoxNjYyMTYyMTA5fQ.NqtFosfafRpFN-VGHdcscuwL1FeuA_pquxoJgllnQCU
+Content-Type: application/json
+
+{
+  "firstName": "Nahid",
+  "lastName": "Jamalli"
+}
+
+### Update password
+PUT http://localhost:5180/api/Profile/password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwOS8wMi8yMDIyIDIzOjQxOjQ5IiwiZXhwIjoxNjYyMTYyMTA5fQ.NqtFosfafRpFN-VGHdcscuwL1FeuA_pquxoJgllnQCU
+Content-Type: application/json
+
+{
+  "old": "Nahid1235",
+  "new": "Nahid1235",
+  "newConfirmed": "Nahid1235"
+}
